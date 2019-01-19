@@ -13,7 +13,7 @@ class ArgvHandler():
 
     def verify_arg(self,options,args):
         cmd =args[0]
-        if hasattr(self,cmd):           #找到该类下与参数相同的函数
+        if hasattr(self,cmd):           #找到该类下与参数相同的函数(这种方法叫类的反射)
             func =getattr(self,cmd)
             func()
 
